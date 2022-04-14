@@ -1,0 +1,16 @@
+{
+  "name": "cronjob",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "benwasilewski@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.9",
+    "node-cron": "^3.0.0",
+    "node-fetch": "2"
+  }
+}

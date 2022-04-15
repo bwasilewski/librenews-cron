@@ -13,7 +13,7 @@ async function main () {
 		await mongoose.connect(process.env.MONGODB_URL)
 		console.log('connected to mongo...')
 
-		cron.schedule('*/5 * * * *', async () => {
+		cron.schedule('*/2 * * * *', async () => {
 		// cron.schedule('*/2 * * * *', async () => {
 			console.log(`executed at: ${new Date()}`)
 			const headlineResponse = 

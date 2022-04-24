@@ -26,7 +26,6 @@ async function main () {
 				await sourceResponse.json()
 
 			console.log(`Fetch successful. ${headlineData.length} headlines retrieved.`)
-			console.log(headlineData)
 			console.log(`${sourceData.length} sources retrieved.`)
 			process.exit(1)
 		})

@@ -14,19 +14,12 @@ async function main () {
 		console.log('connected to mongo...')
 
 		cron.schedule('*/2 * * * *', async () => {
-		// cron.schedule('*/2 * * * *', async () => {
 			console.log(`executed at: ${new Date()}`)
 			const headlineResponse = 
 				await fetch(`http://localhost:3000/v1/headlines/refresh`)
-			const sourceResponse = 
-				await fetch(`http://localhost:3000/v1/sources/refresh`)
-			const headlineData = 
-				await headlineResponse.json()
-			const sourceData = 
-				await sourceResponse.json()
+			const headlineData = await headlineResponse.json()
 
 			console.log(`Fetch successful. ${headlineData.length} headlines retrieved.`)
-			console.log(`${sourceData.length} sources retrieved.`)
 		})
 	} catch (err) {
 		console.log(err)

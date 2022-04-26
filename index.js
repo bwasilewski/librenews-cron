@@ -27,9 +27,7 @@ async function main () {
 
 			console.log(`Fetch successful. ${headlineData.length} headlines retrieved.`)
 			console.log(`${sourceData.length} sources retrieved.`)
-			process.exit(1)
 		})
-		// process.exit(1)
 	} catch (err) {
 		console.log(err)
 		process.exit(1)
